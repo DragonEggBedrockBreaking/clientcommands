@@ -3,8 +3,8 @@ package net.earthcomputer.clientcommands.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
-import net.earthcomputer.multiconnect.api.MultiConnectAPI;
-import net.earthcomputer.multiconnect.api.Protocols;
+// import net.earthcomputer.multiconnect.api.MultiConnectAPI;
+// import net.earthcomputer.multiconnect.api.Protocols;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.command.CommandSource;
@@ -34,9 +34,9 @@ public class BookCommand {
     private static final int DEFAULT_LIMIT = 50;
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        if (MultiConnectAPI.instance().getProtocolVersion() >= Protocols.V1_15) {
-            return; // chunk savestate fixed in 1.15
-        }
+//        if (MultiConnectAPI.instance().getProtocolVersion() >= Protocols.V1_15) {
+//            return; // chunk savestate fixed in 1.15
+//        }
 
         addClientSideCommand("cbook");
 
